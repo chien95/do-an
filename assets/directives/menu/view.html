@@ -1,0 +1,13 @@
+<div class='menu'>
+    <div class="menu-header">
+        <a ui-sref='root.home'><img src='/img/logo.png' class='logo' /></a>
+    </div>
+    <div ng-repeat='group in menus'>
+        <a href='' class='menu-item' ng-class="{'active': group.active}" ng-click='onGroupClick(group)'>
+            <img ng-src="img/menu/{{group.icon}}" /> {{group.title}}
+            <span class='glyphicon' ng-class="{'glyphicon-chevron-up': group.active, 'glyphicon-chevron-down': !group.active}" ng-show='group.items.length>0'></span></a>
+        <div class='menu-items-container' ng-show='group.active'>
+            <a href='' class='menu-item sub-item' ng-repeat='item in group.items' ng-click='onItemClick(item)'>{{item.title}}</a>
+        </div>
+    </div>
+</div>

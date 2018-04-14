@@ -1,0 +1,165 @@
+<div class="main-container col1-layout" id="ins_cart">
+    <div class="chir_breadcrumb  hidden-xs">
+        <div class="container">
+            <ul itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <li class="home">
+                    <a itemprop="url" title="Quay lại trang chủ" href="/">
+                        <span itemprop="title">Trang chủ </span>
+                    </a>
+                    <span>—›</span>
+                </li>
+
+                <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <strong itemprop="title">Giỏ hàng</strong>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="main container">
+        <div class="col-main">
+            <div class="cart">
+                <div class="page-title">
+                    <h2>Giỏ hàng</h2>
+                </div>
+                <p class="text-center cart-empty">
+					Chào bạn! Chúng tôi không tìm thấy sản phẩm nào trong giỏ hàng của bạn.
+                </p>
+                <div class="back-to-col text-center"><a href="/collections/all">Tiếp tục mua hàng</a></div>
+                <div class="insCartTemp" style="display : none">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 colCart left">
+                            <form action="/cart" method="post" novalidate="">
+                                <div class="table-responsive">
+                                    <table class="data-table cart-table table" id="shopping-cart-table">
+                                        <thead>
+                                            <tr class="first last">
+                                                <th rowspan="1">&nbsp;</th>
+                                                <th rowspan="1">
+                                                    <span class="nobr">Tên sản phẩm</span>
+                                                </th>
+                                                <th colspan="1" class="a-center hidden-xs">
+                                                    <span class="nobr">Giá</span>
+                                                </th>
+                                                <th class="a-center" rowspan="1">Số lượng</th>
+                                                <th colspan="1" class="a-center hidden-xs">Thành tiền</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="image text-center">
+                                                    <a class="product-image" title="Túi đựng đồ cho bé hình chấm bi màu đỏ" href="/tui-dung-do-cho-be-hinh-cham-bi-mau-do">
+                                                        <img alt="Túi đựng đồ cho bé hình chấm bi màu đỏ" src="//bizweb.dktcdn.net/thumb/compact/100/245/559/products/utmin.jpg?v=1502724755863">
+                                                    </a>
+                                                </td>
+                                                <td class="text-left">
+                                                    <h2 class="product-name">
+                                                        <a href="/tui-dung-do-cho-be-hinh-cham-bi-mau-do">Túi đựng đồ cho bé hình chấm bi màu đỏ</a>
+                                                    </h2>
+                                                    <span class="variant-title">Đỏ</span>
+                                                    <br>
+                                                    <a class="button remove-item" title="Xóa" href="/cart/change?line=1&amp;quantity=0" data-id="5898784">
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                        <span>Xóa sản phẩm</span>
+                                                    </a>
+                                                </td>
+                                                <td class="a-right hidden-xs text-center">
+                                                    <span class="cart-price">
+                                                        <span class="price">310.000₫</span>
+                                                    </span>
+                                                </td>
+                                                <td class="text-center tdQty">
+                                                    <div class="groupQty">
+                                                        <button type="button" class="qtyControl minus">-</button>
+                                                        <input type="number" maxlength="12" min="1" class="input-text qty" title="Số lượng" size="4" value="1" name="Lines" id="updates_5898784">
+                                                        <button type="button" class="qtyControl plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center hidden-xs">
+                                                    <span class="cart-price">
+                                                        <span class="price">310.000₫</span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="first last">
+                                                <td class="a-right last" colspan="7">
+                                                    <button class="button btn-continue" title="Tiếp tục mua hàng" type="button" onclick="window.location.href='/collections/all'">
+                                                        <span>
+                                                            <span>Tiếp tục mua hàng</span>
+                                                        </span>
+                                                    </button>
+                                                    <input type="submit" name="update" value="Cập nhật số lượng " class="btn-update button">
+
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 colCart right">
+                            <div class="totals">
+                                <div class="inner">
+                                    <table class="table shopping-cart-table-total" id="shopping-cart-totals-table">
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="1" class="a-left">
+                                                    <strong>Tổng tiền</strong>
+                                                </td>
+                                                <td class="a-right text-right">
+                                                    <strong>
+                                                        <span class="price">310.000₫</span>
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <ul class="checkout">
+                                        <li>
+                                            <button class="button btn-proceed-checkout" title="Tiến hành thanh toán" type="button" onclick="window.location.href='/checkout'">
+                                                <span>Tiến hành thanh toán</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+
+                                    <div class="pd_saler">
+                                        <h3>Dịch vụ &amp; Khuyến mãi</h3>
+
+                                        <p>
+                                            Nhập mã M5UD81J5YIB3 khi thanh toán, giảm ngay 100,000đ.
+                                        </p>
+
+
+                                        <p>
+                                            Tặng mã coupon giảm 300.000đ khi đơn hàng trên 3 triệu đồng.
+                                        </p>
+
+
+                                        <p>
+                                            Giao hàng miễn phí đối với đơn hàng trên 5 triệu trong nội thành Tp. Hồ Chí Minh
+                                        </p>
+
+
+                                        <p>
+                                            Giảm ngay 10% đối với những sản phẩm thuộc nhóm Mỹ Phẩm
+                                        </p>
+
+
+                                        <p>
+                                            Giảm ngay 15% đối với những sản phẩm thuộc nhóm Mẹ và bé
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                                <!--inner-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

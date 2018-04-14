@@ -1,0 +1,146 @@
+<div id="insCollectionPage">
+    <div class="chir_breadcrumb  hidden-xs">
+        <div class="container">
+            <ul itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <li class="home">
+                    <a itemprop="url" title="Quay lại trang chủ" href="javascript:void(0)" ui-sref='home.dashboard'>
+                        <span itemprop="title">Trang chủ </span>
+                    </a>
+                    <span>—›</span>
+                </li>
+                <li>
+                    <strong>{{vm.title}}</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="collection_head relative">
+        <div class="container">
+            <div class="boxSortHead relative">
+                <div class="page_head">
+                    <h1 class="collection_title ins_title">
+                        {{vm.title}}
+                    </h1>
+                    <span class="countPd">( {{vm.total}} sản phẩm )</span>
+                </div>
+                <ul class="display-product-option notStyle">
+                    <li class="view-as-grid"  ng-click="vm.viewAS('view_grid')" ng-class="{'selected': vm.active == 'view_grid'}">
+                        <span>grid</span>
+                    </li>
+                    <li class="view-as-list view-as"  ng-click="vm.viewAS('view_list')" ng-class="{'selected': vm.active == 'view_list'}">
+                        <span>list</span>
+                    </li>
+                </ul>
+                <div class="browse-tags">
+                    <div id="sort-by" class="">
+                        <label class="left">Sắp xếp: </label>
+                        <ul>
+                            <li>
+                                <span class="sortText">Thứ tự</span>
+                                <span class="right-arrow"></span>
+                                <ul>
+                                    <li>
+                                        <a href="?sortby=manual">Mặc định</a>
+                                    </li>
+                                    <li>
+                                        <a href="?sortby=best-selling">Bán chạy nhất</a>
+                                    </li>
+                                    <li>
+                                        <a href="?sortby=alpha-asc">A → Z</a>
+                                    </li>
+                                    <li>
+                                        <a href="?sortby=alpha-desc">Z → A</a>
+                                    </li>
+                                    <li>
+                                        <a href="?sortby=price-asc">Giá tăng dần</a>
+                                    </li>
+                                    <li>
+                                        <a href="?sortby=price-desc">Giá giảm dần</a>
+                                    </li>
+                                    <li>
+                                        <a href="?sortby=created-desc">Hàng mới nhất</a>
+                                    </li>
+                                    <li>
+                                        <a href="?sortby=created-asc">Hàng cũ nhất</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main bg_w">
+            <div class="row">
+                <div class="center_column col-xs-12 col-sm-12 col-md-12 product-col" id="center_column">
+                    <div id="view-product-list" class="view-product-list blockFixHeight">
+                        <div id="pd_collection">
+                            <ul class="product-list filter products row notStyle view_grid">
+                                <li class="item_product col-md-3 col-sm-4 col-xs-6" ng-repeat="item in vm.data">
+                                    <div class="pdLoopItem animated zoomIn">
+                                        <div class="itemLoop clearfix">
+                                            <div class="pdLoopImg imageHovers elementFixHeight">
+                                                <div class="pdLabel sale" ng-if="item.sale && item.sale !=0">
+                                                    <span>- {{item.sale}}%</span>
+                                                </div>
+                                                <a href="javascript:void(0)" title="">
+                                                    <picture>
+                                                        <source srcset="//bizweb.dktcdn.net/thumb/medium/100/245/559/products/demo1.jpg?v=1502724707127" media="(min-width: 992px)">
+                                                        <source srcset="//bizweb.dktcdn.net/thumb/large/100/245/559/products/demo1.jpg?v=1502724707127" media="(min-width: 480px) and (max-width: 767px)">
+                                                        <source srcset="//bizweb.dktcdn.net/thumb/compact/100/245/559/products/demo1.jpg?v=1502724707127" media="(max-width: 413px)">
+                                                        <img srcset="//bizweb.dktcdn.net/thumb/medium/100/245/559/products/demo1.jpg?v=1502724707127" alt="Apple iPad Pro 12.9 inch 128GB Wifi">
+                                                    </picture>
+                                                </a>
+                                                <div class="pdLoopAction">
+                                                    <div class="listAction">
+                                                        <a href="javascript:void(0)" class="btnLoop btn-quickview-1" ng-click="vm.product(item)" title="Xem nhanh">
+                                                            <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a href="#/{{vm.slug}}/{{item.slug}}?id={{item.productID}}.html" class="btnLoop view_product"ng-click="vm.details(item)" title="Xem chi tiết">
+                                                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a href="javascript:void(0)" class="add-cart btnLoop Addcart" title="Thêm vào giỏ">
+                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                            </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pdLoopDetail text-center clearfix">
+                                                <h3 class="pdLoopName">
+                                                    <a class="productName" href="javascript:void(0)" title="Apple iPad Pro 12.9 inch 128GB Wifi">{{item.name}}</a>
+                                                </h3>
+                                                <p class="pdPrice">
+                                                    <span>{{item.priceStore | price : "right" : "VNĐ"}}</span>
+                                                </p>
+                                                <div class="pdLoopListView">
+                                                    <ul>
+                                                        <li>
+                                                            <strong>Mã sản phẩm: </strong>
+                                                            <span>{{item.productID}}</span>
+                                                        </li>
+                                                        <li>
+                                                            <strong>Thương hiệu: </strong>
+                                                            <span>{{item.trade}}</span>
+                                                        </li>
+                                                        <li>
+                                                            <strong>Mô tả ngắn: </strong>
+                                                            <span class="short-des">
+                                                                <div class="desc">{{item.content}}</div>
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

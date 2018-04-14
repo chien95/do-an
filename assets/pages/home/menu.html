@@ -1,0 +1,79 @@
+<nav id="headerMenu">
+    <div class="container">
+        <div id="headerNav" class="">
+            <nav id="navWrap" class="nav navSiteMain">
+                <div class="loginMB visible-xs visible-sm">
+                    <div class="wrapLogin clearfix">
+                        <div class="icon">
+                            <img src="//bizweb.dktcdn.net/100/245/559/themes/576178/assets/icon_avatar.png?1514468388141" alt=" ">
+                        </div>
+                        <div class="user">
+
+                            <a class="log-only" href="/account/login" title="Đăng nhập">Đăng nhập</a>
+                            <h3>
+                                Thông tin tài khoản
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-navbar notStyle navbarfix clearfix">
+                    <li class=" active">
+                        <a href="javascript:void(0)" class=" current" title="Trang chủ" ui-sref='home.dashboard'>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="liChild " >
+                        <a href="#/danh-muc-san-pham" title="Sản phẩm">
+                            <span>Sản phẩm</span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="mainChild levlup_2" role="menu" >
+                            <li class=" liChild " ng-repeat="item in vm.data">
+                                <a href="#/{{item.slug}}" class="" title="{{item.name}}" ng-if="item.parent == 0">
+                                    <span>{{item.name}}</span>
+                                    <i class="fa fa-angle-right" aria-hidden="true" ng-if="item.action"></i>
+                                </a>
+                                <ul class="mainChild levlup_3" ng-if="item.action">
+                                    <li class="" ng-repeat="itemsub in vm.data">
+                                        <a href="#/{{itemsub.slug}}" title="{{itemsub.name}}"  ng-if="item.id == itemsub.parent">
+                                            <span>{{itemsub.name}}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="" >
+                        <a href="#/khuyen-mai-hot" class="" title="Khuyến mãi HOT">
+                            <span>Khuyến mãi HOT</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#/san-pham-moi" class="" title="Sản phẩm mới" >
+                            <span>Sản phẩm mới</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)" class="" title="Tin tức" ui-sref='home.listproduct'>
+                            <span>Tin tức</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)" class="" title="Giới thiệu" ui-sref='home.introduce'>
+                            <span>Giới thiệu</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)" class="" title="Liên hệ" ui-sref='home.support'>
+                            <span>Liên hệ</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="visible-xs visible-sm closeMenuMB text-center">
+                    <a href="javascript:void(0)" class="closeNav viewAll">Đóng</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</nav>
